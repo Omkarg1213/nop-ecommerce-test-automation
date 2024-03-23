@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="common.data.setUp.NopEcommerceTestListener"></listener>
+    </listeners>
+    
+    <test name="Integration Test">
+        <parameter name="Author" value="Omkar G"></parameter>
+        
+        <classes>
+            <class name="nopEcommercePoject.NopEcommerce">
+                <methods>
+                    <include name="launchWebsite"/>
+                    <include name="registerNewUser"/>
+                    <include name="toLogin"/>
+                    <include name="addTocart"/>
+                    <include name="checkOut"/>
+                    <include name="billingAddress"/>
+                    <!-- Add more method names if needed -->
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    
+</suite> <!-- Suite -->
+
