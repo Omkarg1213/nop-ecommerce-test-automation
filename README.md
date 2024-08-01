@@ -1,19 +1,94 @@
-Introduction:
+# NopCommerce Automation Testing
 
-Our project involves automating the order placement workflow on NopCommerce, an Ecommerce website, using Selenium WebDriver framework. The primary objective is to ensure the smooth execution of the order process, encompassing login, order submission, payment processing, and order confirmation, through automated tests.
+## Test Case Summary
 
-Setup and Configuration:
-We initiated the project by establishing a Maven project structure to manage dependencies efficiently and streamline the build process. We integrated Selenium WebDriver into the project to automate browser interactions. Additionally, we incorporated the TestNG framework for defining and executing test cases, benefiting from its annotations for test methods and parameterization capabilities. To enhance test result analysis, we integrated Extent Report to generate detailed HTML reports.
+<table>
+  <tr>
+    <th>Test Case ID</th>
+    <th>Description</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>TC_Register_1</td>
+    <td>Verify user registration with valid credentials</td>
+    <td>Passed</td>
+  </tr>
+  <tr>
+    <td>TC_AddToCart_2</td>
+    <td>Verify adding an item to the cart</td>
+    <td>Passed</td>
+  </tr>
+  <tr>
+    <td>TC_Checkout_3</td>
+    <td>Verify checkout process as a guest</td>
+    <td>Passed</td>
+  </tr>
+  <tr>
+    <td>TC_ConfirmOrder_4</td>
+    <td>Verify order confirmation</td>
+    <td>Passed</td>
+  </tr>
+</table>
 
-Test Implementation:
-Our test implementation focused on validating each step of the order placement workflow using Selenium WebDriver. We structured the test execution flow and set up test preconditions using TestNG annotations such as @Test, @BeforeMethod, and @AfterMethod. We prioritized test methods to ensure sequential execution of login, order submission, and confirmation steps. Utilizing TestNG's dependsOnMethods attribute, we established dependencies between test methods to execute certain actions only after successful completion of prerequisite steps.
+## Detailed Test Cases
 
-TestNG XML Configuration:
-We created a TestNG XML file to define the test suite, include test cases, and specify parameters such as parallel execution and thread count. This XML file facilitated effective organization and management of test case execution.
+### Test Case ID: TC_Register_1
+- **Description**: Verify user registration by entering valid credentials.
+- **Preconditions**:
+  - Valid user details
+- **Steps to Execute**:
+  1. Go to <a href="https://demo.nopcommerce.com/register">NopCommerce Registration</a>.
+  2. Fill in the registration form with valid details.
+  3. Click on the "Register" button.
+  4. Validate successful registration.
+- **Expected Result**: Registration successful and user is redirected to the home page.
+- **Actual Result**: As expected.
+- **Status**: Passed
 
-Extent Report Integration:
-We integrated Extent Report listeners to capture test status, logs, screenshots, and other relevant information during test execution. These listeners enabled the generation of comprehensive HTML reports, providing insights into test results and aiding in issue identification and resolution.
+### Test Case ID: TC_AddToCart_2
+- **Description**: Verify adding an item to the cart.
+- **Preconditions**:
+  - User is logged in.
+- **Steps to Execute**:
+  1. Navigate to the book section.
+  2. Add a specific item to the cart.
+  3. Verify the item is added to the cart.
+- **Expected Result**: Item is added to the cart successfully.
+- **Actual Result**: As expected.
+- **Status**: Passed
 
-Conclusion:
+### Test Case ID: TC_Checkout_3
+- **Description**: Verify the checkout process as a guest.
+- **Preconditions**:
+  - Items are added to the cart.
+- **Steps to Execute**:
+  1. Go to the Shopping Cart.
+  2. Agree to terms and conditions.
+  3. Proceed to checkout as a guest.
+  4. Enter required billing details.
+  5. Continue with the shipping method.
+  6. Choose Check/Money Order for payment.
+  7. Continue with the address.
+  8. Confirm the order.
+- **Expected Result**: Successful checkout and order is placed.
+- **Actual Result**: As expected.
+- **Status**: Passed
 
-Through the integration of Selenium WebDriver, TestNG framework, and Extent Report, we successfully automated the order placement workflow on NopCommerce. Our project ensures robustness and reliability in Ecommerce operations by automating critical functionalities such as login, order submission, payment processing, and order confirmation. By leveraging appropriate annotations, priorities, and dependencies, we optimized the structure and efficiency of our test suite, facilitating seamless execution and detailed reporting of test results.
+### Test Case ID: TC_ConfirmOrder_4
+- **Description**: Verify that the order is confirmed and the confirmation message is displayed.
+- **Preconditions**:
+  - Order is placed.
+- **Steps to Execute**:
+  1. Validate the order confirmation message.
+  2. Ensure that “Your order has been successfully processed” message is displayed.
+- **Expected Result**: Confirmation message is displayed successfully.
+- **Actual Result**: As expected.
+- **Status**: Passed
+
+## Summary Report
+
+All test cases have been executed successfully, with each scenario validating the registration, cart addition, checkout, and order confirmation processes on the NopCommerce website. Screenshots of each outcome have been captured and stored in the designated directory.
+
+---
+
+*Documentation written and executed by Omkar G.*
